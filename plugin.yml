@@ -1,9 +1,11 @@
 name: CombatTag
-version: 4.2
+version: 4.8.5
 author: cheddar262
 main: com.trc202.CombatTag.CombatTag
+dev-url: http://dev.bukkit.org/server-mods/combat-tag
 commands:
   CombatTag:
     description: Shows the current remaining time in a tag
     aliases: ctag
     usage: /ctag
+

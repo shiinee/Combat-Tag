@@ -19,6 +19,12 @@ public class Settings {
 	private boolean droptagonkick;
 	private int banResetTimeout;
 	private int banDurationMultiplier;
+	private String commandMessageTagged;
+	private String commandMessageNotTagged;
+	private String tagMessageDamager;
+	private String tagMessageDamaged;
+	private boolean blockTeleport;
+	private boolean dontSpawnInWG;
 	
 	public Settings(){
 		currentMode = SettingsType.NPC;
@@ -36,6 +42,12 @@ public class Settings {
 		tempBanSeconds = 10;
 		banResetTimeout = 60 * 60 * 24;
 		banDurationMultiplier = 2;
+		commandMessageTagged = "You are in combat for [time] seconds.";
+		commandMessageNotTagged = "You are not currently in combat!";
+		tagMessageDamager = "You have hit [player]. Type /ct to check your remaining tag time.";
+		tagMessageDamaged = "You have been hit by [player]. Type /ct to check your remaining tag time.";
+		blockTeleport = false;
+		dontSpawnInWG = false;
 	}
 
 	public void setDebugEnabled(boolean debugEnabled) {
@@ -156,4 +168,51 @@ public class Settings {
         banDurationMultiplier = multiplier;
     }
 
+	public void setCommandMessageTagged(String message) {
+		this.commandMessageTagged = message;
+	}
+
+	public String getCommandMessageTagged() {
+		return commandMessageTagged;
+	}
+
+	public void setCommandMessageNotTagged(String message) {
+		this.commandMessageNotTagged = message;
+	}
+
+	public String getCommandMessageNotTagged() {
+		return commandMessageNotTagged;
+	}
+	
+	public void setBlockTeleport(boolean blockTeleport) {
+		this.blockTeleport = blockTeleport;
+	}
+	
+	public boolean blockTeleport() {
+		return blockTeleport;
+	}
+
+	public void setDontSpawnInWG(boolean dontSpawnInWG) {
+		this.dontSpawnInWG = dontSpawnInWG;
+	}
+	
+	public boolean dontSpawnInWG(){
+		return dontSpawnInWG;
+	}
+
+	public void setTagMessageDamaged(String tagMessageDamaged) {
+		this.tagMessageDamaged = tagMessageDamaged;
+	}
+	
+	public String getTagMessageDamaged() {
+		return tagMessageDamaged;
+	}
+	
+	public void setTagMessageDamager(String tagMessageDamager) {
+		this.tagMessageDamager = tagMessageDamager;
+	}
+	
+	public String getTagMessageDamager() {
+		return tagMessageDamager;
+	}
 }
