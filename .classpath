@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="CombatTag"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="bukkit-1.2.5-R1.0.jar"/>
-	<classpathentry kind="lib" path="craftbukkit-1.2.5-R1.0.jar"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
